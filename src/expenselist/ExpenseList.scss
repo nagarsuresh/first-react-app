@@ -1,0 +1,10 @@
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+  margin: 0 auto;
+  width: 50rem;
+  background-color: #121314;
+  padding: 40px 20px;
+}
