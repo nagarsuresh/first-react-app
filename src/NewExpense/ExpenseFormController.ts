@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { ExpenseDto } from "../expenseitem/expense-dto";
-import { ExpenseFormProps } from "./ExpesenForm";
+import { ExpenseFormProps } from "./ExpenseForm";
 
 const useExpenseFormController = (props: ExpenseFormProps) => {
   const [formValues, setFormValues] = useState<ExpenseDto>({

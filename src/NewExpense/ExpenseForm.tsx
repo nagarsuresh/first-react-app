@@ -8,6 +8,7 @@ import { ExpenseDto } from '../expenseitem/expense-dto';
 
 export interface ExpenseFormProps {
   onSaveExpenseData: (dto: ExpenseDto) => void;
+  onCancel: () => void;
 }
 
 const ExpenseForm: FC<ExpenseFormProps> = (props: ExpenseFormProps) => {
@@ -51,6 +52,9 @@ const ExpenseForm: FC<ExpenseFormProps> = (props: ExpenseFormProps) => {
       </div>
 
       <div className="new-expense__actions">
+        <button type="button" onClick={() => props.onCancel()}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
