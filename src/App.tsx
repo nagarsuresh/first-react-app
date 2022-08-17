@@ -9,10 +9,10 @@ import { ExpenseDto } from './expenseitem/expense-dto';
 
 function App() {
   const initExpenses: ExpenseDto[] = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     initExpenses.push({
       id: `e${i}`,
-      date: randPastDate(),
+      date: randPastDate({years: 3}),
       title: randCompanyName(),
       amount: randAmount()
     });
