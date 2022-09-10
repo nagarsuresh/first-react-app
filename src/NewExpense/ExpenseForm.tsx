@@ -5,6 +5,7 @@ import useExpenseFormController from './ExpenseFormController';
 import { formatDate } from '../utils/date-utils';
 import { FC } from 'react';
 import { ExpenseDto } from '../expenseitem/expense-dto';
+import Button from '../button/Button';
 
 export interface ExpenseFormProps {
   onSaveExpenseData: (dto: ExpenseDto) => void;
@@ -52,10 +53,10 @@ const ExpenseForm: FC<ExpenseFormProps> = (props: ExpenseFormProps) => {
       </div>
 
       <div className="new-expense__actions">
-        <button type="button" onClick={() => props.onCancel()}>
+        <Button type="button" onClick={() => props.onCancel()}>
           Cancel
-        </button>
-        <button type="submit">Add Expense</button>
+        </Button>
+        <Button type="submit">Add Expense</Button>
       </div>
     </form>
   );

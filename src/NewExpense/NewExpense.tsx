@@ -4,6 +4,7 @@ import React, { FC, useState } from 'react';
 
 import { ExpenseDto } from '../expenseitem/expense-dto';
 import ExpenseForm from './ExpenseForm';
+import Button from '../button/Button';
 
 interface NewExpenseProps {
   onCreateNewExpense: (dto: ExpenseDto) => void;
@@ -22,7 +23,7 @@ const NewExpense: FC<NewExpenseProps> = (props: NewExpenseProps) => {
   if (!editMode) {
     return (
       <div className="new-expense">
-        <button onClick={() => setEditMode(true)}>Add New Expense</button>
+        <Button onClick={() => setEditMode(true)}>Add New Expense</Button>
       </div>
     );
   } else {
